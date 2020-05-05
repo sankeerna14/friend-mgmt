@@ -1,8 +1,14 @@
-<h2>{{this.title}}</h2>
-
-<ul>
-		{{#each this.people as |person|}}
-				<li>{{person}}</li>
-				<li><button {{action "showPerson" person}}>{{person}}</button></li>
-		{{/each}}
-</ul>
+<div class="ml-5">
+		<h2>{{this.title}}</h2>
+		<ul>
+				{{#each scientists as |person|}}
+						<li>{{person}}</li>
+				{{/each}}
+		</ul>
+</div>
+<hr>
+<h6 class="text-primary ml-5">Add New Scientists</h6>
+<div class="d-flex align-items-center ml-5 mr-5">
+		{{input class="form-control mr-3 w-20" value=personName}}
+		<button type="button" class="btn btn-primary" onclick={{action "showPeople"}}>Add</button>
+</div>
